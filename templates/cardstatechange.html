@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<title>Smartcard State Change</title>
+
+<body>
+
+<h1>Smartcard State Changed</h1>
+<table border="1" cellspacing="0" cellpadding="5">
+
+<tr><td><b>Card Reader ID</b></td><td colspan="3">{{readerid}}</td><tr>
+
+<tr><td><b>Control Point</b></td><td><b>GPIO</b></td><td><b>Current State</b></td><td><b>Set State</b></td></tr>
+
+<tr><td>Powered State</td><td>{{powergpio}}</td><td>{{poweredstate}}</td><td><a href="/html/{{readerid}}/{% if poweredstate=='on' %}off{% else %}on{% endif %}/{{insertedstate}}">{% if poweredstate=='on' %}power off{% else %}power on{% endif %}</a></td><tr>
+<tr><td>Inserted State</td><td>{{switchgpio}}</td><td>{{insertedstate}}</td><td><a href="/html/{{readerid}}/{{poweredstate}}/{% if insertedstate=='in' %}out{% else %}in{% endif %}">{% if insertedstate=='in' %}remove{% else %}insert{% endif %}</a></td><tr>
+</table>
+
+</body>
+</html>

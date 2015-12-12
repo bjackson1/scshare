@@ -1,0 +1,11 @@
+---
+cards:
+  card1:
+    gpio:
+      power: 2
+      switch: 3
+  card2:
+    gpio:
+      power: 4
+      switch: 14
+

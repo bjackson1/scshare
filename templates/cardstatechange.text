@@ -1,0 +1,12 @@
+<pre>
+Smartcard State Changed
+=========================
+
+Card Reader ID: {{readerid}}
+
+Control Point    GPIO    Current State
+---------------  ------  ---------------
+Powered State    {{powergpio|center(2)}}      {{poweredstate}}
+Inserted State   {{switchgpio|center(2)}}      {{insertedstate}}
+
+
